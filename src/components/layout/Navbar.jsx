@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Menu, X, TerminalSquare } from 'lucide-react'
 import Container from '@/components/common/Container'
+import ThemeToggle from '@/components/common/ThemeToggle'
 import { navLinks } from '@/constants/navigation'
 import { siteConfig } from '@/constants/siteConfig'
 import { useScroll } from '@/hooks/useScroll'
@@ -46,16 +47,20 @@ export default function Navbar() {
               {link.label}
             </NavLink>
           ))}
+          <ThemeToggle />
         </nav>
 
-        <button
-          className="text-text md:hidden"
-          onClick={() => setOpen((o) => !o)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <ThemeToggle />
+          <button
+            className="text-text"
+            onClick={() => setOpen((o) => !o)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </Container>
 
       {open && (
