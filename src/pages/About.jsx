@@ -2,7 +2,9 @@ import Container from '@/components/common/Container'
 import SectionTitle from '@/components/common/SectionTitle'
 import Skills from '@/sections/Skills'
 import Education from '@/sections/Education'
+import Certificates from '@/sections/Certificates'
 import { siteConfig } from '@/constants/siteConfig'
+import profilePhoto from '../assets/icons/profile/pic_profile.jpg'
 
 export default function About() {
   return (
@@ -13,7 +15,7 @@ export default function About() {
           <div className="grid gap-10 md:grid-cols-[220px_1fr]">
             <div className="aspect-square w-full max-w-[220px] overflow-hidden rounded-sm border border-border bg-surface">
               <img
-                src="/images/profile/avatar.jpg"
+                src={profilePhoto}
                 alt={`Portrait of ${siteConfig.name}`}
                 className="h-full w-full object-cover"
                 onError={(e) => {
@@ -37,6 +39,7 @@ export default function About() {
       </section>
       <Skills />
       <Education />
+      <Certificates />
     </>
   )
 }

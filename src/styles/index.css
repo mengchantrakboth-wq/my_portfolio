@@ -20,6 +20,23 @@
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 }
 
+/* Dark is the default palette (see @theme above). Light overrides the same
+   variable names, so every utility class (bg-ink, text-mint, etc.) just
+   works in both themes without duplicating classes anywhere. */
+[data-theme='light'] {
+  --color-ink: #f7f8f6;
+  --color-surface: #ffffff;
+  --color-surface-raised: #eef1ef;
+  --color-border: #d8dedb;
+  --color-text: #14201d;
+  --color-text-muted: #4d5c57;
+  --color-text-faint: #8b978f;
+  --color-mint: #1f9d6c;
+  --color-mint-dim: #17784f;
+  --color-amber: #b6791e;
+  --color-rose: #c2554f;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -29,6 +46,7 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 ::selection {
