@@ -1,39 +1,36 @@
-// Drop cert images in public/images/certificates and reference them by
-// filename below — no import needed since it's the public/ folder.
+
+import cert1 from "../assets/icons/certificate/cert_1.jpg"
+import cert2 from "../assets/icons/certificate/cert_2.jpg"
+import cert3 from "../assets/icons/certificate/cert_3.jpg"
+import cert4 from "../assets/icons/certificate/cert_4.jpg"
 export const certificates = [
   {
-    id: 'cert-1',
-    title: 'Certificate title',
-    issuer: 'Issuing organization',
+    id: 'cert_1',
+    title: 'Backend Courses',
+    issuer: 'ETEC Center',
     date: '2026',
-    image: '/images/certificates/cert-1.jpg',
+    image: cert1,
   },
   {
-    id: 'cert-1',
-    title: 'Certificate title',
-    issuer: 'Issuing organization',
+    id: 'cert_2',
+    title: 'Front Courses',
+    issuer: 'ETEC Center',
     date: '2026',
-    image: '/images/certificates/cert-1.jpg',
+    image: cert2,
   },
   {
-    id: 'cert-1',
-    title: 'Certificate title',
-    issuer: 'Issuing organization',
+    id: 'cert_3',
+    title: 'Basic Java &Project Courses',
+    issuer: 'ETEC Center',
     date: '2026',
-    image: '/images/certificates/cert-1.jpg',
+    image: cert3,
   },
   {
-    id: 'cert-1',
-    title: 'Certificate title',
-    issuer: 'Issuing organization',
-    date: '2026',
-    image: '/images/certificates/cert-1.jpg',
+    id: 'cert_4',
+    title: 'Basic/ Advance C/C++ /OOP /Algrithms &Project Courses',
+    issuer: 'ETEC Center',
+    date: '2025',
+    image: cert4,
   },
-  {
-    id: 'cert-1',
-    title: 'Certificate title',
-    issuer: 'Issuing organization',
-    date: '2026',
-    image: '/images/certificates/cert-1.jpg',
-  },
+   
 ]
