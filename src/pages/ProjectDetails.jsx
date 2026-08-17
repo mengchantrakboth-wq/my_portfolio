@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { ArrowLeft, Users, BookOpen } from 'lucide-react'
+import { ArrowLeft, Users, BookOpen, Link as LinkIcon, ExternalLink } from 'lucide-react'
 import Container from '@/components/common/Container'
 import { projects } from '@/data/projects'
 
@@ -34,6 +34,39 @@ export default function ProjectDetails() {
         <p className="mt-5 max-w-2xl text-lg text-text-muted">
           {project.description}
         </p>
+
+        {(project.links.repo || project.links.demo) && (
+          <div className="mt-5 flex flex-wrap gap-3">
+            {project.links.repo && (
+              <a
+                href={project.links.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-sm border border-border px-3 py-1.5 font-mono text-xs text-text-muted hover:text-mint hover:border-mint"
+              >
+                <LinkIcon size={14} /> Repo
+              </a>
+            )}
+            {project.links.demo && (
+              <a
+                href={project.links.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-sm border border-border px-3 py-1.5 font-mono text-xs text-text-muted hover:text-mint hover:border-mint"
+              >
+                <ExternalLink size={14} /> Live demo
+              </a>
+            )}
+          </div>
+        )}
+
+        {project.image && (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="mt-8 w-full rounded-sm border border-border object-cover"
+          />
+        )}
 
         <div className="mt-8 grid gap-6 md:grid-cols-[1fr_260px]">
           <div className="space-y-6">
