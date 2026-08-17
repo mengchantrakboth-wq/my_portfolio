@@ -1,4 +1,22 @@
+import coffeeshop from "../assets/icons/projects/coffeshop.png";
 export const projects = [
+  {
+    id: 'coffee-store',
+    path: '~/projects/coffee-store',
+    title: 'Coffee Store Website',
+    summary:
+      'A responsive coffee shop website with a working cart, product catalog, and account pages — vanilla HTML, CSS, and JavaScript.',
+    description:
+      "A multi-page coffee shop site built with plain HTML, CSS, and JavaScript. Includes a homepage, a full drinks/beans menu, a filterable shop page (beans, brew gear, merch) with category tabs, an about page with team and location sections, and a login/sign-up page with client-side validation. A shared cart system (add/remove/quantity, persisted in localStorage) and live search work across every page, along with a mobile nav, scroll-reveal animations, and toast notifications.",
+    role: 'Solo — layout, responsive design, cart logic, page structure',
+    team: [],
+    course: 'Independent project',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    year: '2026',
+    type: 'Solo project',
+    links: { repo: 'https://github.com/mengchantrakboth-wq/Coffee-Store', demo: 'https://coffee-store-gold.vercel.app/index.html' },
+    image: coffeeshop,
+  },
   {
     id: 'cafepos',
     path: '~/projects/cafe-shop-pos',
