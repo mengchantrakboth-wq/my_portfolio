@@ -4,7 +4,7 @@ import Skills from "@/sections/Skills";
 import Education from "@/sections/Education";
 import Certificates from "@/sections/Certificates";
 import { siteConfig } from "@/constants/siteConfig";
-import icon_profile from "../assets/icons/profile/Icon_profile.jpg";
+import icon_profile from "../assets/icons/profile/icon_profile.jpg";
 
 export default function About() {
   return (
