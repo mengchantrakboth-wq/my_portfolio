@@ -1,10 +1,10 @@
-import Container from '@/components/common/Container'
-import SectionTitle from '@/components/common/SectionTitle'
-import Skills from '@/sections/Skills'
-import Education from '@/sections/Education'
-import Certificates from '@/sections/Certificates'
-import { siteConfig } from '@/constants/siteConfig'
-import profilePhoto from '../assets/icons/profile/pic_profile.jpg'
+import Container from "@/components/common/Container";
+import SectionTitle from "@/components/common/SectionTitle";
+import Skills from "@/sections/Skills";
+import Education from "@/sections/Education";
+import Certificates from "@/sections/Certificates";
+import { siteConfig } from "@/constants/siteConfig";
+import icon_profile from "../assets/icons/profile/Icon_profile.jpg";
 
 export default function About() {
   return (
@@ -13,14 +13,11 @@ export default function About() {
         <SectionTitle index="~" path="~/about" title="About me" />
         <Container>
           <div className="grid gap-10 md:grid-cols-[220px_1fr]">
-            <div className="aspect-square w-full max-w-[220px] overflow-hidden rounded-sm border border-border bg-surface">
+            <div className="w-full max-w-[220px] overflow-hidden rounded-sm border border-border bg-surface">
               <img
-                src={profilePhoto}
+                src={icon_profile}
                 alt={`Portrait of ${siteConfig.name}`}
-                className="h-full w-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                }}
+                className="w-full h-auto"
               />
             </div>
             <div>
@@ -28,10 +25,11 @@ export default function About() {
                 {siteConfig.summary}
               </p>
               <p className="mt-4 max-w-2xl text-text-muted">
-                I'm currently studying at {siteConfig.university}, {siteConfig.department}.
-                My coursework and side projects cover web development end to end,
-                a Java desktop application, and networking fundamentals — so this
-                site is organized the way I organize a codebase: by directory.
+                I'm currently studying at {siteConfig.university},{" "}
+                {siteConfig.department}. My coursework and side projects cover
+                web development end to end, a Java desktop application, and
+                networking fundamentals — so this site is organized the way I
+                organize a codebase: by directory.
               </p>
             </div>
           </div>
@@ -41,5 +39,5 @@ export default function About() {
       <Education />
       <Certificates />
     </>
-  )
+  );
 }

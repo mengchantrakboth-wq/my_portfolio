@@ -20,11 +20,7 @@ const FacebookMark = (props) => (
   </svg>
 )
 
-const TiktokMark = (props) => (
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" {...props}>
-    <path d="M16.6 0h-3.4v16.3c0 1.7-1.4 3.1-3.1 3.1s-3.1-1.4-3.1-3.1 1.4-3.1 3.1-3.1c.3 0 .6 0 .9.1V9.7c-.3 0-.6-.1-.9-.1-3.6 0-6.5 2.9-6.5 6.5S6.5 22.6 10.1 22.6s6.5-2.9 6.5-6.5V8.4c1.3.9 2.9 1.5 4.6 1.5V6.5c-2.6 0-4.6-2.1-4.6-4.6V0Z" />
-  </svg>
-)
+
 
 const iconMap = {
   github: GithubMark,
