@@ -27,7 +27,6 @@ const iconMap = {
   linkedin: LinkedinMark,
   mail: Mail,
   meta: FacebookMark,
-  tiktok: TiktokMark,
 }
 
 export default function SocialLinks({ className }) {
